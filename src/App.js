@@ -52,7 +52,8 @@ function App() {
               {
                 details.length > 0 ? (<div id="induser">
                   <section id="pic"><img src={details[2]} alt="userpic" id="pict" /></section>
-                  <section id="name">
+                  <div class name="remdet">
+                   <section id="name">
                    <span className='head'>Name</span>  <h3>{`${details[0] + " " + details[1]}`}</h3>
                   </section>
                   <section id="emailid">
@@ -60,7 +61,7 @@ function App() {
                   </section>
                   <section id="description">
                     <span className='head'>Description</span> <h3>{details[4]}</h3>
-                  </section>
+                  </section></div>
                 </div>) : (<div className='loader'></div>)
               }
             </>) : (<><img alt="user"  src="user.png" className="imguser" /></>)
