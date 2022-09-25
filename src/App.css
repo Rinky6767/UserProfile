@@ -1,38 +1,180 @@
 .App {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+
+}
+
+.wrapper {
+  border: 1px solid rgb(121, 165, 242);
+  margin: 60px 5%;
+  border-radius: 10px;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#profilenum {
+  height: 80vh;
+  background: rgb(2, 0, 36);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+#userinp {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  margin: 60px;
+  padding: 70px;
+  height: 27vh;
+}
+
+.remdet {
+  margin-top: 15px;
+}
+
+#pict,
+.imguser {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  box-shadow: 1px 1px 20px #251187;
+}
+
+#pict:hover {
+  box-shadow: 1px 1px 20px #2abcec;
+}
+
+.imguser {
+  display: block;
+  position: relative;
+}
+
+.btnsub {
+  width: 100px;
+  height: 36px;
+  border-radius: 12px;
+  border: none;
+  background-color: #251187;
+  color: white;
+  cursor: pointer;
+}
+
+.btnsub:hover {
+  text-decoration: underline;
+}
+
+#num {
+  border-radius: 7px;
+  height: 25px;
+  border: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#num:hover,
+.wrapper:hover {
+  box-shadow: 1px 2px 7px rgb(134, 66, 228);
+  transition: all 1s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#error {
+  color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#info {
+  font-size: 17px;
+  color: aliceblue;
+}
+
+#userdata {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: rgb(168, 221, 252);
+  background: radial-gradient(circle, rgba(168, 221, 252, 1) 19%, rgba(121, 179, 240, 1) 69%, rgba(122, 159, 244, 1) 96%);
 }
 
-.App-link {
-  color: #61dafb;
+.loader {
+  width: 100px;
+  height: 100px;
+  background-color: #2abcec;
+  border-radius: 15px;
+  animation: spinner 1s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes spinner {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(100deg);
+  }
+}
+
+.head {
+  text-decoration: underline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#induser {
+  color: #251187;
+}
+
+@media only screen and (max-width:1106px) {
+  #info {
+    font-size: 13px;
+  }
+
+  #pict,
+  .imguser {
+    width: 120px;
+    height: 120px;
+    border-radius: 65px;
+    box-shadow: 1px 1px 20px #251187;
+  }
+
+  #error {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width:820px) {
+  .wrapper {
+    grid-template-columns: 0.5fr;
+    border: none;
+    margin: 0px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+  }
+
+  #userdata {
+    grid-row: 2;
+  }
+
+  #profilenum,
+  #userdata {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .wrapper:hover {
+    box-shadow: none;
   }
 }
