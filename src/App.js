@@ -71,7 +71,7 @@ function App() {
         <div id="profilenum">
           <form id="userinp">
             <label for="num" id="info">Enter a user profile Number </label>
-            <div><input type="number" id="num" value={num} onChange={changeHandler} /></div>
+            <div><input type="number" id="num" value={num} onChange={changeHandler} placeholder="Number should be between 1 to 12" /></div>
             <div><h3 id="error">{error}</h3></div>
             <div><button className='btnsub' onClick={submitHandler}>Search</button></div>
           </form>
