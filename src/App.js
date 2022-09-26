@@ -10,6 +10,7 @@ function App() {
     setdetails([]);
     setFlag(false);
     setNum(event.target.value);
+    setError("");
   }
   function submitHandler(event) {
     event.preventDefault();
@@ -57,8 +58,8 @@ function App() {
                     <h2 id="imgname">{`${details[0]}`}</h2>
                     </div>
                     </section>
-                 <div className='remdet'>
-                  <section id="name">
+                  <div class name="remdet">
+                   <section id="name">
                    <span className='head'>Name</span>  <h3>{`${details[0] + " " + details[1]}`}</h3>
                   </section>
                   <section id="emailid">
@@ -76,7 +77,7 @@ function App() {
         <div id="profilenum">
           <form id="userinp">
             <label for="num" id="info">Enter a user profile Number </label>
-            <div><input type="number" id="num" value={num} onChange={changeHandler} /></div>
+            <div><input type="number" id="num" value={num} onChange={changeHandler} placeholder="Between 1 to 12" /></div>
             <div><h3 id="error">{error}</h3></div>
             <div><button className='btnsub' onClick={submitHandler}>Search</button></div>
           </form>

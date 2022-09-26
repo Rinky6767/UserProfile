@@ -36,7 +36,7 @@
 }
 
 .remdet {
-  margin-top: 15px;
+  padding-top: 20px;
 }
 
 .imguser {
@@ -84,6 +84,8 @@
   background: rgb(196,168,252);
   background: radial-gradient(circle, rgba(196,168,252,1) 19%, rgba(121,197,240,1) 58%, rgba(122,239,244,1) 96%);
   animation: animate 8s linear infinite;
+  text-decoration: underline;
+  box-shadow: 1px 1px 30px #251187;
 }
 #num {
   border-radius: 7px;
