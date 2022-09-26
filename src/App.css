@@ -63,6 +63,7 @@
   background: rgb(168, 218, 252);
   background: radial-gradient(circle, rgba(168, 218, 252, 1) 19%, rgba(121, 171, 240, 1) 58%, rgba(122, 244, 228, 1) 96%);
   color: black;
+  font-weight:bold;
   background-size: 400%;
   cursor: pointer;
   box-shadow: 2px 2px 20px rgb(168, 252, 226);
