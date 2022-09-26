@@ -51,7 +51,12 @@ function App() {
             flag ? (<>
               {
                 details.length > 0 ? (<div id="induser">
-                  <section id="pic"><img src={details[2]} alt="userpic" id="pict" /></section>
+                  <section id="pic" className='box'>
+                    <div className='content'>
+                    <img src={details[2]} alt="userpic" id="pict" />
+                    <h2 id="imgname">{`${details[0]}`}</h2>
+                    </div>
+                    </section>
                  <div className='remdet'>
                   <section id="name">
                    <span className='head'>Name</span>  <h3>{`${details[0] + " " + details[1]}`}</h3>
